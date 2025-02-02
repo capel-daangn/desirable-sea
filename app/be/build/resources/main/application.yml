@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    default: local
+    # commond profile을 함께 구동
+    group:
+      # H2 인메모리를 DB로 사용
+      test:
+        - common
+      # Local의 MySQL을 DB로 사용
+      local:
+        - common
+      # Docker 내부의 MySQL을 DB로 사용
+      prod:
+        - common
